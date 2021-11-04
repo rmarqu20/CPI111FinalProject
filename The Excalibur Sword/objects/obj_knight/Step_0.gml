@@ -1,59 +1,44 @@
 /// @description Insert description here
 // You can write your code in this editor
-var bbox;
+var xDirection = keyboard_check(ord("D")) - keyboard_check(ord("A"));
+var jump = keyboard_check_pressed(vk_space);
+var onTheGround_big = place_meeting(x, y + 1, obj_collision_big);
+var onTheGround_sm = place_meeting(x, y + 1, obj_collision_sm);
+if (xDirection != 0) image_xscale = xDirection;
 
-key_right = keyboard_check(vk_right);
-key_left = keyboard_check(vk_left);
-key_up = keyboard_check(vk_up);
-key_down = keyboard_check(vk_down);
+xSpeed = xDirection * spd;
+ySpeed++;
 
-hsp = (key_right - key_left) * 4;
-vsp = (key_down - key_up) * 4;
+if (onTheGround_big || onTheGround_sm) {
+	if (xDirection != 0) { sprite_index = spr_knight_run; } 
+	else { sprite_index = spr_knight_idle; }
 
-//for horizontal collisions
-if(hsp > 0)
-{
-	bbox_side = bbox_right;
-}
-else
-{
-	bbox_side = bbox_left;
-}
-if((tilemap_get_at_pixel(tilemap, bbox_side + hsp, bbox_top) != 0) || (tilemap_get_at_pixel(tilemap,bbox_side+hsp,bbox_bottom) != 0))
-{
-	if(hsp > 0)
-	{
-		x = x - (x mod 32) + 31 - (bbox_right - x);
+	if (jump) {
+		ySpeed = -15;
 	}
-	else
-	{
-		x = x - (x mod 32) - (bbox_left - x);
-	}
-	hsp = 0;	
+} else {
+	sprite_index = spr_knight_jump;
 }
 
-
-x += hsp;
-
-//for vertical collisions
-if(vsp > 0)
-{
-	bbox_side = bbox_bottom;
-}
-else
-{
-	bbox_side = bbox_top;
-}
-if((tilemap_get_at_pixel(tilemap, bbox_left, bbox_side + vsp) != 0) || (tilemap_get_at_pixel(tilemap, bbox_right, bbox_side + vsp) != 0))
-{
-	if(vsp > 0)
-	{
-		y = y - (y mod 32) + 31 - (bbox_bottom - y);
+if (place_meeting(x + xSpeed, y, obj_collision_big) || place_meeting(x + xSpeed, y, obj_collision_sm)) { 
+	
+	while (!place_meeting(x + sign(xSpeed), y, obj_collision_big) && !place_meeting(x + sign(xSpeed), y, obj_collision_sm)) {
+		x += sign(xSpeed);
 	}
-	else
-	{
-		y = y - (y mod 32) - (bbox_top - y);
-	}
-	vsp = 0;	
+	
+	xSpeed = 0; 
 }
-y += vsp;
+
+x += xSpeed;
+
+
+if (place_meeting(x, y + ySpeed, obj_collision_big) || place_meeting(x, y + ySpeed, obj_collision_sm)) { 
+	
+	while (!place_meeting(x, y + sign(ySpeed), obj_collision_big) && !place_meeting(x, y + sign(ySpeed), obj_collision_sm)) {
+		y += sign(ySpeed);
+	}
+	
+	ySpeed = 0; 
+}
+
+y += ySpeed;
