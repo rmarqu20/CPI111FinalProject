@@ -9,6 +9,7 @@
     {"id":{"name":"spr_title_background","path":"sprites/spr_title_background/spr_title_background.yy",},"order":5,},
     {"id":{"name":"spr_collision_mask_big","path":"sprites/spr_collision_mask_big/spr_collision_mask_big.yy",},"order":4,},
     {"id":{"name":"bg_cave4b","path":"sprites/bg_cave4b/bg_cave4b.yy",},"order":4,},
+    {"id":{"name":"spr_skeleton_idle","path":"sprites/spr_skeleton_idle/spr_skeleton_idle.yy",},"order":0,},
     {"id":{"name":"spr_collision_mask_sm","path":"sprites/spr_collision_mask_sm/spr_collision_mask_sm.yy",},"order":1,},
     {"id":{"name":"font_main_menu","path":"fonts/font_main_menu/font_main_menu.yy",},"order":0,},
     {"id":{"name":"spr_knight_run","path":"sprites/spr_knight_run/spr_knight_run.yy",},"order":1,},
@@ -57,6 +58,8 @@
     {"folderPath":"folders/Sprites/Cave.yy","order":0,"resourceVersion":"1.0","name":"Cave","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Knight.yy","order":3,"resourceVersion":"1.0","name":"Knight","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/Collisions.yy","order":3,"resourceVersion":"1.0","name":"Collisions","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/Enemies.yy","order":6,"resourceVersion":"1.0","name":"Enemies","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/Enemies/Skeleton.yy","order":1,"resourceVersion":"1.0","name":"Skeleton","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
