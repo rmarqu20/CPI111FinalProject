@@ -7,14 +7,14 @@ var onTheGround_sm = place_meeting(x, y + 1, obj_collision_sm);
 if (xDirection != 0) image_xscale = xDirection;
 
 xSpeed = xDirection * spd;
-ySpeed++;
+ySpeed+= 0.5;
 
 if (onTheGround_big || onTheGround_sm) {
 	if (xDirection != 0) { sprite_index = spr_knight_run; } 
 	else { sprite_index = spr_knight_idle; }
 
 	if (jump) {
-		ySpeed = -15;
+		ySpeed = -14;
 	}
 } else {
 	sprite_index = spr_knight_jump;
