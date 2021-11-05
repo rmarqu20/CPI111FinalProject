@@ -47,7 +47,7 @@
     "spriteId": {"name":"spr_skeleton_attack","path":"sprites/spr_skeleton_attack/spr_skeleton_attack.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 30.0,
+    "playbackSpeed": 10.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
