@@ -41,7 +41,7 @@
     "spriteId": {"name":"spr_skeleton_take_hit","path":"sprites/spr_skeleton_take_hit/spr_skeleton_take_hit.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 30.0,
+    "playbackSpeed": 10.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
