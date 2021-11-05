@@ -22,7 +22,7 @@ if (onTheGround_big || onTheGround_sm)
 	if (jump) 
 	{
 		sprite_index = spr_knight_jump;
-		ySpeed = -14;
+		ySpeed = -12;
 	}
 } 
 
