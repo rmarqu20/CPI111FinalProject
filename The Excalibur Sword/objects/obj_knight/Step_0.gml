@@ -9,35 +9,40 @@ if (xDirection != 0) image_xscale = xDirection;
 xSpeed = xDirection * spd;
 ySpeed+= 0.5;
 
-if (onTheGround_big || onTheGround_sm) {
-	if (xDirection != 0) { sprite_index = spr_knight_run; } 
-	else { sprite_index = spr_knight_idle; }
-
-	if (jump) {
+if (onTheGround_big || onTheGround_sm) 
+{
+	if (xDirection != 0) 
+	{ 
+		sprite_index = spr_knight_run; 
+	} 
+	else 
+	{ 
+		sprite_index = spr_knight_idle; 
+	}
+	if (jump) 
+	{
+		sprite_index = spr_knight_jump;
 		ySpeed = -14;
 	}
-} else {
-	sprite_index = spr_knight_jump;
-}
+} 
 
-if (place_meeting(x + xSpeed, y, obj_collision_big) || place_meeting(x + xSpeed, y, obj_collision_sm)) { 
-	
-	while (!place_meeting(x + sign(xSpeed), y, obj_collision_big) && !place_meeting(x + sign(xSpeed), y, obj_collision_sm)) {
+if (place_meeting(x + xSpeed, y, obj_collision_big) || place_meeting(x + xSpeed, y, obj_collision_sm)) 
+{ 	
+	while (!place_meeting(x + sign(xSpeed), y, obj_collision_big) && !place_meeting(x + sign(xSpeed), y, obj_collision_sm)) 
+	{
 		x += sign(xSpeed);
 	}
-	
 	xSpeed = 0; 
 }
 
 x += xSpeed;
 
-
-if (place_meeting(x, y + ySpeed, obj_collision_big) || place_meeting(x, y + ySpeed, obj_collision_sm)) { 
-	
-	while (!place_meeting(x, y + sign(ySpeed), obj_collision_big) && !place_meeting(x, y + sign(ySpeed), obj_collision_sm)) {
+if (place_meeting(x, y + ySpeed, obj_collision_big) || place_meeting(x, y + ySpeed, obj_collision_sm)) 
+{ 
+	while (!place_meeting(x, y + sign(ySpeed), obj_collision_big) && !place_meeting(x, y + sign(ySpeed), obj_collision_sm)) 
+	{
 		y += sign(ySpeed);
 	}
-	
 	ySpeed = 0; 
 }
 
