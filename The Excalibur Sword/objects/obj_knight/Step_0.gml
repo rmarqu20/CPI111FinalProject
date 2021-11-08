@@ -25,6 +25,12 @@ if (onTheGround_big || onTheGround_sm)
 		ySpeed = -12;
 	}
 } 
+//infinite jumps for testing
+if (jump) 
+	{
+		sprite_index = spr_knight_jump;
+		ySpeed = -12;
+	}
 
 if (place_meeting(x + xSpeed, y, obj_collision_big) || place_meeting(x + xSpeed, y, obj_collision_sm)) 
 { 	
