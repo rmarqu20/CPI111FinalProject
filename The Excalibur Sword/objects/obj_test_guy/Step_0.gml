@@ -15,25 +15,24 @@ if (onTheGround_big || onTheGround_sm)
 {
 	if (jump) 
 	{
-		sprite_index = spr_knight_jump;
+		sprite_index = spr_test_jump;
 		ySpeed = -12;
 	}
 	
-	else if (xDirection != 0) 
+	if (xDirection != 0) 
 	{ 
-		sprite_index = spr_knight_run; 
+		sprite_index = spr_test_run; 
 	} 
 	
 	else 
 	{ 
-		sprite_index = spr_knight_idle; 
+		sprite_index = spr_test_idle; 
 	}
 	
 } 
 
 if((ySpeed < 0) && (!jump_hld))
 {
-	sprite_index = spr_knight_jump;
 	ySpeed = max(ySpeed, 0);
 }
 
