@@ -71,7 +71,7 @@
     "spriteId": {"name":"spr_knight_jump","path":"sprites/spr_knight_jump/spr_knight_jump.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 9.0,
+    "playbackSpeed": 20.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
