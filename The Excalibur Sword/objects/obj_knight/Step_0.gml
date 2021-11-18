@@ -2,6 +2,9 @@
 // You can write your code in this editor
 var xDirection = keyboard_check(ord("D")) - keyboard_check(ord("A"));
 var jump = keyboard_check_pressed(vk_space);
+var roll = keyboard_check(vk_shift);
+var attack = mouse_check_button(mb_left);
+var shield = mouse_check_button(mb_right);
 var jump_hld = keyboard_check(vk_space);
 var onTheGround_big = place_meeting(x, y + 1, obj_collision_big);
 var onTheGround_sm = place_meeting(x, y + 1, obj_collision_sm);
@@ -15,10 +18,18 @@ if (onTheGround_big || onTheGround_sm)
 {
 	if (jump) 
 	{
+		show_debug_message(self.y);
 		sprite_index = spr_knight_jump;
 		ySpeed = -12;
 	}
-	
+	else if (attack) 
+	{ 
+		sprite_index = spr_knight_attack; 
+	} 
+	else if (shield) 
+	{ 
+		sprite_index = spr_knight_shield; 
+	} 
 	else if (xDirection != 0) 
 	{ 
 		sprite_index = spr_knight_run; 
