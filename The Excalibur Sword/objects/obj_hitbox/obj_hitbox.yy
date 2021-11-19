@@ -1,9 +1,6 @@
 {
-  "spriteId": {
-    "name": "spr_collision_mask_big",
-    "path": "sprites/spr_collision_mask_big/spr_collision_mask_big.yy",
-  },
-  "solid": true,
+  "spriteId": null,
+  "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
@@ -20,15 +17,17 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_skeleton","path":"objects/obj_skeleton/obj_skeleton.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Collisions",
-    "path": "folders/Objects/Collisions.yy",
+    "name": "Objects",
+    "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_collision_big",
+  "name": "obj_hitbox",
   "tags": [],
   "resourceType": "GMObject",
 }

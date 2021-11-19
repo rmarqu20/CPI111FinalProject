@@ -3,7 +3,7 @@
     "name": "spr_collision_mask_sm",
     "path": "sprites/spr_collision_mask_sm/spr_collision_mask_sm.yy",
   },
-  "solid": false,
+  "solid": true,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
