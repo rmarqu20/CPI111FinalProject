@@ -2,7 +2,6 @@
 // You can write your code in this editor
 var xDirection = keyboard_check(ord("D")) - keyboard_check(ord("A"));
 var jump = keyboard_check_pressed(vk_space);
-var roll = keyboard_check(vk_shift);
 var attack = mouse_check_button(mb_left);
 var shield = mouse_check_button(mb_right);
 var jump_hld = keyboard_check(vk_space);
@@ -13,6 +12,7 @@ if (xDirection != 0) image_xscale = xDirection;
 xSpeed = xDirection * spd;
 ySpeed += 0.5;
 
+attack_cooldown -= 1;
 
 if (onTheGround_big || onTheGround_sm) 
 {
@@ -25,6 +25,7 @@ if (onTheGround_big || onTheGround_sm)
 	else if (attack) 
 	{ 
 		sprite_index = spr_knight_attack; 
+
 	} 
 	else if (shield) 
 	{ 
