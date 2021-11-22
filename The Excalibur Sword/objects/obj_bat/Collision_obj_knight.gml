@@ -1,13 +1,24 @@
-attack = 1;
-if(sprite_index == spr_bat_right)
+var test = 10 * obj_knight.spd;
+var predictRightX = obj_knight.x + test;
+var predictLeftX = obj_knight.x - test;
+
+if(sprite_index == spr_bat_right && (!place_meeting(predictRightX, obj_knight.x, obj_collision_big) || !place_meeting(predictRightX, obj_knight.x, obj_collision_sm)))
 {
 	obj_knight.xSpeed = 10 * obj_knight.spd;
 	obj_knight.x += obj_knight.xSpeed;
-	locked_on = 0;
+	attack_cooldown = 0;
 }
-else if(sprite_index == spr_bat_left)
+else if(sprite_index == spr_bat_left && (!place_meeting(predictLeftX, obj_knight.x, obj_collision_big) || !place_meeting(predictLeftX, obj_knight.x, obj_collision_sm)))
 {
 	obj_knight.xSpeed = 10 * obj_knight.spd;
 	obj_knight.x -= obj_knight.xSpeed;
-	locked_on = 0;
+	attack_cooldown = 0;
+}
+// Flee code
+if (distance_to_object(obj_knight) < safe_distance) 
+{
+	state = state.flee;
+	hspeed = 2.5;
+	vspeed = 2.5;
+	direction = -point_direction(x, y, obj_knight.x, obj_knight.y);
 }
