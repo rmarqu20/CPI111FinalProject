@@ -24,7 +24,8 @@ if (onTheGround_big || onTheGround_sm)
 	}
 	else if (attack) 
 	{ 
-		sprite_index = spr_knight_attack; 
+		sprite_index = spr_knight_attack;
+		
 
 	} 
 	else if (shield) 
