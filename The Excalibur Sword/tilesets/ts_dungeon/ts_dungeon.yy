@@ -354,8 +354,8 @@
     "TileSerialiseData": [],
   },
   "parent": {
-    "name": "Dungeon_sprites",
-    "path": "folders/Sprites/Dungeon_sprites.yy",
+    "name": "Dungeon",
+    "path": "folders/Tile Sets/Dungeon.yy",
   },
   "resourceVersion": "1.0",
   "name": "ts_dungeon",
