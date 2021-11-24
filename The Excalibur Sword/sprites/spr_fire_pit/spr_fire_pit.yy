@@ -41,7 +41,7 @@
     "spriteId": {"name":"spr_fire_pit","path":"sprites/spr_fire_pit/spr_fire_pit.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 30.0,
+    "playbackSpeed": 10.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
