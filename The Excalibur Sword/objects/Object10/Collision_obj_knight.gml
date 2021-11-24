@@ -1,5 +1,18 @@
 /// @description Insert description here
 // You can write your code in this editor
-audio_play_sound(sfx_lava_scream, 1, false);
-obj_knight.x = 1042;
-obj_knight.y = 3796;
+
+
+if(room == Room3)
+{
+	audio_play_sound(sfx_lava_scream, 1, false);
+	obj_knight.x = 97;
+	obj_knight.y = 3333;
+}
+
+
+if(room == Room2)
+{
+	audio_play_sound(sfx_lava_scream, 1, false);
+	obj_knight.x = 1042;
+	obj_knight.y = 3796;
+}
