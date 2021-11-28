@@ -1,6 +1,7 @@
 {
   "resources": [
     {"id":{"name":"bg_cave4","path":"sprites/bg_cave4/bg_cave4.yy",},"order":3,},
+    {"id":{"name":"ts_dungeon_mirror","path":"tilesets/ts_dungeon_mirror/ts_dungeon_mirror.yy",},"order":1,},
     {"id":{"name":"obj_collision_stair","path":"objects/obj_collision_stair/obj_collision_stair.yy",},"order":2,},
     {"id":{"name":"bg_cave3","path":"sprites/bg_cave3/bg_cave3.yy",},"order":2,},
     {"id":{"name":"spr_ts_castle_8","path":"sprites/spr_ts_castle_8/spr_ts_castle_8.yy",},"order":8,},
@@ -22,6 +23,7 @@
     {"id":{"name":"ts_dungeon","path":"tilesets/ts_dungeon/ts_dungeon.yy",},"order":0,},
     {"id":{"name":"spr_hanging_candle","path":"sprites/spr_hanging_candle/spr_hanging_candle.yy",},"order":11,},
     {"id":{"name":"obj_hit_effect","path":"objects/obj_hit_effect/obj_hit_effect.yy",},"order":10,},
+    {"id":{"name":"spr_ts_dungeon_mirror","path":"sprites/spr_ts_dungeon_mirror/spr_ts_dungeon_mirror.yy",},"order":5,},
     {"id":{"name":"obj_chandelier","path":"objects/obj_chandelier/obj_chandelier.yy",},"order":14,},
     {"id":{"name":"spr_ts_cliffs","path":"sprites/spr_ts_cliffs/spr_ts_cliffs.yy",},"order":0,},
     {"id":{"name":"ts_castle","path":"tilesets/ts_castle/ts_castle.yy",},"order":0,},
@@ -150,7 +152,7 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2.3.7.603",
+    "IDEVersion": "2.3.6.595",
   },
   "resourceVersion": "1.4",
   "name": "The Excalibur Sword",
