@@ -21,6 +21,7 @@
     {"id":{"name":"obj_collision_sm","path":"objects/obj_collision_sm/obj_collision_sm.yy",},"order":1,},
     {"id":{"name":"spr_background_clouds","path":"sprites/spr_background_clouds/spr_background_clouds.yy",},"order":0,},
     {"id":{"name":"ts_dungeon","path":"tilesets/ts_dungeon/ts_dungeon.yy",},"order":0,},
+    {"id":{"name":"Room4","path":"rooms/Room4/Room4.yy",},"order":4,},
     {"id":{"name":"spr_hanging_candle","path":"sprites/spr_hanging_candle/spr_hanging_candle.yy",},"order":11,},
     {"id":{"name":"obj_hit_effect","path":"objects/obj_hit_effect/obj_hit_effect.yy",},"order":10,},
     {"id":{"name":"spr_ts_dungeon_mirror","path":"sprites/spr_ts_dungeon_mirror/spr_ts_dungeon_mirror.yy",},"order":5,},
@@ -56,6 +57,7 @@
     {"id":{"name":"sfx_lava_scream","path":"sounds/sfx_lava_scream/sfx_lava_scream.yy",},"order":0,},
     {"id":{"name":"obj_candle","path":"objects/obj_candle/obj_candle.yy",},"order":12,},
     {"id":{"name":"obj_skeleton","path":"objects/obj_skeleton/obj_skeleton.yy",},"order":0,},
+    {"id":{"name":"ts_cliffs","path":"tilesets/ts_cliffs/ts_cliffs.yy",},"order":0,},
     {"id":{"name":"obj_fire_pit","path":"objects/obj_fire_pit/obj_fire_pit.yy",},"order":13,},
     {"id":{"name":"spr_knight_roll","path":"sprites/spr_knight_roll/spr_knight_roll.yy",},"order":6,},
     {"id":{"name":"spr_ts_castle_4","path":"sprites/spr_ts_castle_4/spr_ts_castle_4.yy",},"order":4,},
@@ -112,6 +114,7 @@
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
     {"roomId":{"name":"Room3","path":"rooms/Room3/Room3.yy",},},
+    {"roomId":{"name":"Room4","path":"rooms/Room4/Room4.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
@@ -152,7 +155,7 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2.3.6.595",
+    "IDEVersion": "2.3.7.603",
   },
   "resourceVersion": "1.4",
   "name": "The Excalibur Sword",
