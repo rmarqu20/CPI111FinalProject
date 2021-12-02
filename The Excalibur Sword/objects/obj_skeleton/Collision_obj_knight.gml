@@ -1,4 +1,8 @@
 attack = 1;
+
+
+health-=2;
+
 if(sprite_index == spr_skeleton_walk_right)
 {
 	obj_knight.xSpeed = 15 * obj_knight.spd;
@@ -16,6 +20,10 @@ else if(sprite_index == spr_skeleton_walk_left)
 
 if(obj_knight.sprite_index == spr_knight_attack)
 {
+	if(health < 91)
+	{
+		health+=10;
+	}
 	instance_create_layer(x, y, "Instances", obj_skeleton_death)
 	instance_destroy()
 }

@@ -20,7 +20,7 @@ switch(hspeed)
 		break;
 }
 
-if(attack_cooldown > 40)
+if(attack_cooldown > 4)
 {
 	attack = 0
 	attack_cooldown = 0;
