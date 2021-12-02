@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
+health -= 5;
 if(room == Room3)
 {
 	audio_play_sound(sfx_lava_scream, 1, false);
