@@ -1,6 +1,4 @@
 attack = 1;
-
-
 health-=2;
 
 if(sprite_index == spr_skeleton_walk_right)
