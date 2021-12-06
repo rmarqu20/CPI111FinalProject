@@ -11,7 +11,7 @@ if(state == state.idle)
 	self.y = self.y + amp*sin(self.x/period);
 }
 */
-
+attack_cooldown1++;
 attack_cooldown += 2;
 
 //manage which direction bat animation is flying

@@ -1,6 +1,7 @@
 attack = 1;
 health-=2;
-
+audio_play_sound(skeleton_attack, 1, false)
+audio_play_sound(player_take_hit, 1, false);
 if(sprite_index == spr_skeleton_walk_right)
 {
 	obj_knight.xSpeed = 15 * obj_knight.spd;
@@ -18,6 +19,7 @@ else if(sprite_index == spr_skeleton_walk_left)
 
 if(obj_knight.sprite_index == spr_knight_attack)
 {
+	audio_play_sound(skeleton_death, 1, false)
 	if(health < 91)
 	{
 		health+=10;

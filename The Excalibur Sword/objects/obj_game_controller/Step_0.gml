@@ -25,4 +25,9 @@ if(keyboard_check(ord("L")))
 		obj_knight.x = 192;
 		obj_knight.y = 3775;
 	}
+	else if(room == Room4)
+	{
+		obj_knight.x = 60;
+		obj_knight.y = 3717;
+	}
 }

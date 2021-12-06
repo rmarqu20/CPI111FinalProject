@@ -14,6 +14,8 @@ xSpeed = xDirection * spd;
 ySpeed += 0.5;
 
 attack_cooldown -= 1;
+swing_cooldown ++;
+
 
 if(keyboard_check(ord("D")) || keyboard_check(ord("A")))
 {
@@ -39,8 +41,14 @@ if (onTheGround_big || onTheGround_sm || onTheGround_stair)
 		sprite_index = spr_knight_jump;
 		ySpeed = -12;
 	}
-	else if (attack && xDirection == 0) 
+	else if (attack) 
 	{ 
+		if(!audio_is_playing(player_attack) && swing_cooldown > 42)
+		{
+			
+			audio_play_sound(player_attack,1,false);
+			swing_cooldown = 0;
+		}
 		sprite_index = spr_knight_attack;
 		
 	} 
