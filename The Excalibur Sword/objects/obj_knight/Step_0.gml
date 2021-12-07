@@ -37,7 +37,7 @@ if (onTheGround_big || onTheGround_sm || onTheGround_stair)
 {
 	if (jump) 
 	{
-		show_debug_message(self.y);
+		//show_debug_message(self.y);
 		sprite_index = spr_knight_jump;
 		ySpeed = -12;
 	}
@@ -75,11 +75,11 @@ if((ySpeed < 0) && (!jump_hld))
 }
 
 //infinite jumps for testing
-if (jump) 
-	{
-		sprite_index = spr_knight_jump;
-		ySpeed = -12;
-	}
+//if (jump) 
+//	{
+//		sprite_index = spr_knight_jump;
+//		ySpeed = -12;
+//	}
 
 
 
