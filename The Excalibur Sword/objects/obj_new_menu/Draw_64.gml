@@ -84,23 +84,33 @@ var wide = 0;
 for(var i = 0; i < menuitems; i++) 
 {
 	var w = string_width(option[menu_level, i]);  //find the widest string
-	if w > wide wide = w;
+	if(w > wide)
+	{
+		wide = w;
+	}
 }
-var ls = (xx - 30);
-var rs = (xx + wide);
+var ls = (xx - wide/2);
+var rs = (xx + wide/2);
 		
 /// DRAW MENU
 for (var i = 0; i < menuitems; i++) 
-{		
+{
+	if(menu_level > 2 && i > 0)
+	{
+		draw_set_font(font_main_menu4);
+	}
 	//highlight on mouse over
-	if(point_in_rectangle(mx,my,ls,yy-vS/3,rs,yy+vS/3) && mousec) 
+	if(point_in_rectangle(mx,my,ls,yy-vS/3,rs,yy+vS/3) && mousec) //left top right bottom
 	{
 		//if cursor != i audio_play_sound(snd_switch,1,false); //add sound
 		cursor = i;
 	}
 	col = color1;
 	txt = option[menu_level, i];
-	if cursor == i col = color2;
+	if(cursor == i)
+	{
+		col = color2;
+	}
 	draw_text_transformed_color(xx,yy,txt,1,1,0,col,col,col,col,1);
 	yy += vS;
 }
@@ -127,11 +137,11 @@ if action
 		case 0:
 			switch(cursor)
 			{
-				//start game
+				//Start Game
 				case 0: room_goto(Room1); break;
-				//settings
+				//Credits
 				case 1: menu_level = 1; break;
-				//quit game
+				//Quit Game
 				case 2: game_end(); break;
 			}
 			break;
@@ -139,26 +149,81 @@ if action
 		case 1:
 			switch(cursor)
 			{
-				//window size
-				case 0: menu_level = 0; break;
-				//brightness
-				case 1: menu_level = 0; break;
-				//controls
-				case 2: menu_level = 0; break;
-				//back 
-				case 3: menu_level = 0; break;
+				//Devs
+				case 0: menu_level = 2; break;
+				//Artwork
+				case 1: menu_level = 3; break;
+				//Environment Sprites
+				case 2: menu_level = 4; break;
+				//Player/Enemy Sprites
+				case 3: menu_level = 5; break;
+				//Music/Sfx
+				case 4: menu_level = 6; break;
+				//Back 
+				case 5: menu_level = 0; break;
 			}
 			break;
-		//Start Game Menu
 		case 2:
 			switch(cursor)
 			{
-				//Mini Games
-				case 0: room_goto(room_mini_games_menu); break;
-				//Main Levels
-				case 1: room_goto(room_main_games_menu); break;
-				//back 
-				case 2: menu_level = 0; break;
+				//Devs
+				case 0: break;
+				case 1: break;
+				case 2: break;
+				case 3: break;
+				case 4: break;
+				case 5: menu_level = 1; break;
+			}
+			break;
+		case 3:
+			switch(cursor)
+			{
+				//Artwork
+				case 0: break;
+				case 1: break;
+				case 2: break;
+				case 3: break;
+				case 4: menu_level = 1; break;
+			}
+			break;
+		case 4:
+			switch(cursor)
+			{
+				//Environment Sprites
+				case 0: break;
+				case 1: break;
+				case 2: break;
+				case 3: break;
+				case 4: break;
+				case 5: menu_level = 1; break;
+			}
+			break;
+		case 5:
+			switch(cursor)
+			{
+				//Player/Enemy Sprites
+				case 0: break;
+				case 1: break;
+				case 2: break;
+				case 3: break;
+				case 4: break;
+				case 5: break;
+				case 6: menu_level = 1; break;
+			}
+			break;
+		case 6:
+			switch(cursor)
+			{
+				//Music/Sfx
+				case 0: break;
+				case 1: break;
+				case 2: break;
+				case 3: break;
+				case 4: break;
+				case 5: break;
+				case 6: break;
+				case 7: break;
+				case 8: menu_level = 1; break;
 			}
 			break;
 	}

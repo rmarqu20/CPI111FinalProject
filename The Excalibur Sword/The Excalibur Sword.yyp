@@ -40,6 +40,7 @@
     {"id":{"name":"spr_hbandit_walk_right","path":"sprites/spr_hbandit_walk_right/spr_hbandit_walk_right.yy",},"order":5,},
     {"id":{"name":"spr_hbandit_attack_right","path":"sprites/spr_hbandit_attack_right/spr_hbandit_attack_right.yy",},"order":3,},
     {"id":{"name":"obj_excalibur","path":"objects/obj_excalibur/obj_excalibur.yy",},"order":16,},
+    {"id":{"name":"font_main_menu4","path":"fonts/font_main_menu4/font_main_menu4.yy",},"order":3,},
     {"id":{"name":"cave","path":"sounds/cave/cave.yy",},"order":1,},
     {"id":{"name":"spr_ts_dungeon_mirror","path":"sprites/spr_ts_dungeon_mirror/spr_ts_dungeon_mirror.yy",},"order":5,},
     {"id":{"name":"obj_chandelier","path":"objects/obj_chandelier/obj_chandelier.yy",},"order":14,},
